@@ -1,9 +1,19 @@
 import React from "react";
 import PlayerCard from "./PlayerCard";
+import styled from 'styled-components';
+
+const List = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 10px auto;
+    border: solid 2px grey;
+
+`;
 
 const PlayerList= ({players}) => {
     return (
-      <section className="player-list">
+      <List>
         {players.map( player => (
           <PlayerCard 
             key={player.id} 
@@ -12,7 +22,7 @@ const PlayerList= ({players}) => {
             searches={player.searches}
           />
         ))}
-      </section>
+      </List>
     )
   }
 

@@ -1,8 +1,25 @@
 import React from 'react';
 import useDarkMode from "../hooks/useDarkMode";
+import styled from "styled-components"
 
+const NavBar = styled.div`
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+`;
 
+const Btn = styled.button`
+    height: 75%;
+    margin: auto 10px;
+    padding: 10px;
+`;
 
+const Title = styled.h1`
+    margin: 0 25% 0 10%;
+    color: #fffff2;
+
+    
+`;
 
 const Navbar = () => {
     const [darkMode, setDarkMode] = useDarkMode(false)
@@ -13,13 +30,13 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="navbar">
-            <h1>Top Female Footballers</h1>
-            <button
+        <NavBar className="navbar">
+            <Title>Top Female Footballers</Title>
+            <Btn
                 onClick={toggleMode}
                 className={darkMode ? 'toggle toggled' : 'toggle'}
-            >Switch It Up</button>
-        </nav>
+            >Switch It Up</Btn>
+        </NavBar>
     )
 }
 

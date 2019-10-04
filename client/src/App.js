@@ -2,7 +2,12 @@ import React from 'react';
 import './App.css';
 import axios from 'axios'
 import PlayerList from './components/PlayerList';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  margin: 0 auto;
+`;
 
 class App extends React.Component {
   constructor() {
@@ -27,10 +32,10 @@ class App extends React.Component {
   
   render() {
   return (
-    <div className="App">
+    <AppContainer>
       <Navbar />
       <PlayerList players={this.state.player}/>
-    </div>
+    </AppContainer>
    );
   }
 }
