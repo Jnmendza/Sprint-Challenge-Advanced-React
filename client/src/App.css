@@ -31,3 +31,36 @@
     transform: rotate(360deg);
   }
 }
+
+.toggle {
+  background: dodgerBlue;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode__toggle {
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
+  
+}
+.navbar {
+  background-color: #1F2022;
+  border: none;
+}
