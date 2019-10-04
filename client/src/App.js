@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import axios from 'axios'
+import PlayerList from './components/PlayerList';
 
 class App extends React.Component {
   constructor() {
@@ -16,19 +17,17 @@ class App extends React.Component {
         .then(response => {
           console.log(response)
           let playerData = response.data;
-          this.state({
+          this.setState({
             player: playerData
           })
         })
-        .catch(err => {
-          console.log(err)
-        })
+        .catch(err => console.log(err))
     }
   
   render() {
   return (
     <div className="App">
-      Player List goes here
+      <PlayerList players={this.state.player}/>
     </div>
    );
   }

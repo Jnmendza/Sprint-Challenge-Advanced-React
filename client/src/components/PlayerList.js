@@ -1,10 +1,19 @@
-import React from 'react';
+import React from "react";
+import PlayerCard from "./PlayerCard";
 
-const PlayerList = ({ players }) => {
+const PlayerList= ({players}) => {
     return (
-        <div>
-        </div>
+      <section className="player-list">
+        {players.map( player => (
+          <PlayerCard 
+            key={player.id} 
+            name={player.name} 
+            country={player.country}
+            searches={player.searches}
+          />
+        ))}
+      </section>
     )
-}
+  }
 
-export default PlayerList
+export default PlayerList;
